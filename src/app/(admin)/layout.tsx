@@ -139,7 +139,6 @@ export default function Dashboard({ children }: any) {
             <Divider />
             <List component="nav">
               <MainListItems />
-              {/*{mainListItems}*/}
               <Divider sx={{ my: 1 }} />
               {secondaryListItems}
             </List>
@@ -158,9 +157,8 @@ export default function Dashboard({ children }: any) {
           >
             <Toolbar />
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-              <Grid container spacing={3}>
-                {children}
-              </Grid>
+              {children}
+
               <Copyright sx={{ pt: 4 }} />
             </Container>
           </Box>

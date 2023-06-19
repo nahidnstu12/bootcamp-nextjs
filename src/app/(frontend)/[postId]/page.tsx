@@ -32,7 +32,7 @@ async function getData(id: number) {
   return result;
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: any) {
   const post = await getData(params.postId);
   return {
     title: post?.title,
@@ -40,9 +40,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const SinglePost = async ({ params }) => {
+const SinglePost = async ({ params }: any) => {
   const data = await getData(params.postId);
-  console.log("postdata--", data);
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>

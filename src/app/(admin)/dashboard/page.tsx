@@ -35,7 +35,7 @@ export default function Page() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: any) => {
     console.log("data saved", data);
     reset(initialValue);
     // setValue("author", "");
@@ -77,7 +77,7 @@ export default function Page() {
                 labelId="author-label"
                 {...register("author")}
                 error={!!errors.author}
-                renderValue={(selected) => selected || "Select an author"}
+                // renderValue={(selected) => selected || "Select an author"}
               >
                 <MenuItem value="John Doe">John Doe</MenuItem>
                 <MenuItem value="Jane Smith">Jane Smith</MenuItem>
